@@ -21,7 +21,7 @@ export default class NavBar extends React.Component {
             <Link href="/" passHref>
               <Nav.Link>Home</Nav.Link>
             </Link>
-            <Link href="/" passHref>
+            <Link href="/shop/shop" passHref>
               <Nav.Link>Shop</Nav.Link>
             </Link>
             <Link href="/" passHref>

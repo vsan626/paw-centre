@@ -1,0 +1,2 @@
+export const GET_DATA_SERVER = 'GET_DATA_SERVER';
+export const GET_DATA_CLIENT = 'GET_DATA_CLIENT';

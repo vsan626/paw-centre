@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import NavBar from '../components/NavBar'
+import React from 'react';
+import { wrapper } from '../redux/store/store.js';
+import NavBar from '../components/NavBar';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -28,4 +30,4 @@ function MyApp({ Component, pageProps }) {
 //   return { ...appProps }
 // }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);
