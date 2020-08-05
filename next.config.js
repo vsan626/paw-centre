@@ -1,3 +1,5 @@
+// Enables .env file data to be used
+
 const webpack = require('webpack');
 require('dotenv').config();
 
