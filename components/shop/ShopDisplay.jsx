@@ -12,7 +12,6 @@ class ShopDisplay extends React.Component {
     return (
       <div>
         <h1>Shop Component</h1>
-
       </div>
     );
   }
