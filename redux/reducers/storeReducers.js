@@ -2,8 +2,13 @@ import { GET_DATA_SERVER, GET_DATA_CLIENT } from '../types/types';
 import { HYDRATE } from 'next-redux-wrapper';
 
 const initialState = {
-  server: null,
-  client: null
+  // server: null,
+  // client: null
+  products: [
+    {id: '1', name: 'chew toy', price: 55},
+    {id: '2', name: 'vest', price: 80},
+    {id: '3', name: 'leash', price: 60}
+  ]
 };
 
 // create your reducer

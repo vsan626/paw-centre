@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
+import App, { Container } from 'next/app'
 import React from 'react';
 import { wrapper } from '../redux/store/store.js';
 import NavBar from '../components/NavBar';
@@ -26,7 +27,7 @@ function MyApp({ Component, pageProps }) {
 // MyApp.getInitialProps = async (appContext) => {
 //   // calls page's `getInitialProps` and fills `appProps.pageProps`
 //   const appProps = await App.getInitialProps(appContext);
-//
+
 //   return { ...appProps }
 // }
 
