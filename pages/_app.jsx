@@ -1,21 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import App, { Container } from 'next/app'
+import App, { Container } from 'next/app';
 import React from 'react';
 import { wrapper } from '../redux/store/store.js';
+
 import NavBar from '../components/NavBar';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
-      <NavBar />
-      <Component {...pageProps} />
-      <style jsx>{`
-        body {
-          margin: 0px;
-          padding: 0px;
-        }
-      `}</style>
-    </div>
+      <div>
+        <NavBar />
+        <Component {...pageProps} />
+        <style jsx>{`
+          body {
+            margin: 0px;
+            padding: 0px;
+          }
+        `}</style>
+      </div>
   );
 }
 

@@ -1,11 +1,12 @@
 import React from 'react';
 import ShopDisplay from '../../components/shop/ShopDisplay';
-import loadFirebase from '../../lib/database/config/fbConfig.js';
-import { connect } from 'react-redux';
-import actions from '../../redux/actions/storeActions.js'
-import Router from 'next/router'
+import {loadFirebase} from '../../lib/database/config/fbConfig.js';
+
 
 class Shop extends React.Component {
+  constructor(props){
+    super(props);
+  }
   //gets initial data from firestore and stores it into props
   static async getInitialProps() {
     let firebase = await loadFirebase();
@@ -33,7 +34,6 @@ class Shop extends React.Component {
           reject([]);
         });
     });
-    //need to send data to redux store
     return { products: result };
   }
 
@@ -43,10 +43,11 @@ class Shop extends React.Component {
     return (
       <div>
         Shop route page
-        <ShopDisplay />
+        <ShopDisplay products={products}/>
       </div>
     );
   }
 }
+
 
 export default Shop;

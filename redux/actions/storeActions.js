@@ -1,6 +1,6 @@
 import Router from 'next/router';
-import axios from 'axios';
-import { GET_DATA_SERVER, GET_DATA_CLIENT, GET_FIRESTORE_DATA } from '../types/types';
+import { GET_DATA_SERVER, GET_DATA_CLIENT } from '../types/types';
+
 
 // const getDataClient = async (dispatch, getState, { getFirestore }) => {
 //   const firestore = await getFirestore();

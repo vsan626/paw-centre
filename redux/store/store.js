@@ -12,25 +12,23 @@ const initialState = {};
 // const middleware = [thunk];
 
 export const store = () => createStore(rootReducer,
+  initialState,
   compose(
       applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
       reduxFirestore(fbConfig)
   )
 );
 
-const rrfConfig = {
-  userProfile: 'users',
-  useFirestoreForProfile: true
-}
-const rrfProps = {
-  firebase,
-  config: rrfConfig,
-  dispatch: store.dispatch,
-  createFirestoreInstance,
-}
-
-
-
+// const rrfConfig = {
+//   userProfile: 'users',
+//   useFirestoreForProfile: true
+// }
+// const rrfProps = {
+//   firebase,
+//   config: rrfConfig,
+//   dispatch: store.dispatch,
+//   createFirestoreInstance,
+// }
 
 // export an assembled wrapper
 export const wrapper = createWrapper(store, { debug: true });

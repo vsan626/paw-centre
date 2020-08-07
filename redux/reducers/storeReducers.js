@@ -1,4 +1,4 @@
-import { GET_DATA_SERVER, GET_DATA_CLIENT, GET_FIRESTORE_DATA } from '../types/types';
+import { GET_DATA_SERVER, GET_DATA_CLIENT } from '../types/types';
 import { HYDRATE } from 'next-redux-wrapper';
 
 const initialState = {
@@ -19,8 +19,6 @@ const reducer = (state = initialState, action) => {
     case GET_DATA_SERVER:
       return { ...state, server: action.payload };
     case GET_DATA_CLIENT:
-      return { ...state, client: action.payload };
-    case GET_FIRESTORE_DATA:
       return { ...state, client: action.payload };
     default:
       return state;
