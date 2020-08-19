@@ -1,6 +1,6 @@
 This file is a record of different codes / articles I encountered
 
-*To get data from firestore within a component. Gets initial data from firestore and stores it into props
+*To get data from firestore within a component. Gets initial data from firestore and stores it into props (put into shop.jsx in pages)
    
    static async getInitialProps() {
      let firebase = await loadFirebase();
@@ -34,8 +34,9 @@ This file is a record of different codes / articles I encountered
 
   ================================================================
 
-  *Storing data retrieved from firestore into redux store
+  * Storing data retrieved from firestore into redux store
   https://react-redux-firebase.com/docs/api/firestoreConnect.html
+  https://github.com/prescottprue/redux-firestore
 
   import { connect } from 'react-redux';
   import { compose } from 'redux';
@@ -54,6 +55,23 @@ This file is a record of different codes / articles I encountered
 
   ================================================================
   Tips / Notes:
-  *To query more specific data: Create a redux action that will make an async call to the database. Call the function from a component
-  *Firestore reducer gets combined with redux reducer to return a source of truth state for application
-  *
+  * To query more specific data: Create a redux action that will make an async call to the database. Call the function from a component
+  * Firestore reducer gets combined with redux reducer to return a source of truth state for application
+  * store auth token, usernames, 
+
+  ================================================================
+  Folder Structure
+
+├── pages
+│   ├── _app.jsx
+│   ├── index.jsx
+|   └── shop.jsx
+├── database
+│   └── fbConfig.js
+├── redux
+│   ├── index.js
+│   └── reducers
+|       ├── storeReducers.js
+|       └── index.js
+├── .env
+└── package.json
